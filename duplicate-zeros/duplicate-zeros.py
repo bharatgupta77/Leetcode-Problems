@@ -5,14 +5,29 @@ class Solution:
         """
         l=len(arr)
         i=0
+        
         while(i<l-1):
-            if arr[i]==0:
-                for k in range(l-2,i,-1):
-                    arr[k+1]=arr[k]
-                arr[i+1]=0
+            if arr[i] == 0 :
+                arr.insert(i+1,0)
+                arr[:] = arr[:l]
                 i+=2
                 continue
             i+=1
+        
+        
+        
+        
+    
+        # l=len(arr)
+        # i=0
+        # while(i<l-1):
+        #     if arr[i]==0:
+        #         for k in range(l-2,i,-1):
+        #             arr[k+1]=arr[k]
+        #         arr[i+1]=0
+        #         i+=2
+        #         continue
+        #     i+=1
         
             
                 
