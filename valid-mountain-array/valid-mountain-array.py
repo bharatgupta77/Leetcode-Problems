@@ -6,15 +6,7 @@ class Solution:
         #my solution
         
         x=arr[0]
-        mid_index = 0
-        
-        # #to check whether there is only decreasing slope
-        # k = arr[:]
-        # k.sort(reverse = True)
-        # if (k == arr):
-        #     return False
-        
-        
+        mid_index = 0 
         
         for i in range(1,len(arr)):
             if x<arr[i]:
@@ -26,10 +18,10 @@ class Solution:
                 mid_index = i-1
                 break
         
+        # mountain peak can't be 1st and last point
         if(mid_index == 0 or mid_index == len(arr)-1):
             return False;
-        
-        
+           
                 
         #after getting highest point will check the decrasing slope
         l = arr[mid_index:]
@@ -37,6 +29,8 @@ class Solution:
         if (l == arr[mid_index:] and len(set(l)) == len(l)):
             return True
 
+        
+        
 
           #simple approach (time complexity will be more)
             
