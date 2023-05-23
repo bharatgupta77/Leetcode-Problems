@@ -23,7 +23,7 @@
 </ul>
 	
 	
-<h4>My notes</h4>
+<h2>My notes</h2>
 <p> We can use XOR opeartion too , to find out the only unique element  </p>
 	
 	nums = [2, 4, 3, 2, 4]
