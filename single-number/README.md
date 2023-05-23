@@ -21,6 +21,9 @@
 	<li><code>-3 * 10<sup>4</sup> &lt;= nums[i] &lt;= 3 * 10<sup>4</sup></code></li>
 	<li>Each element in the array appears twice except for one element which appears only once.</li>
 </ul>
+	
+	
+<h4>My notes</h4>
 <p> We can use XOR opeartion too , to find out the only unique element  </p>
 	
 	nums = [2, 4, 3, 2, 4]
