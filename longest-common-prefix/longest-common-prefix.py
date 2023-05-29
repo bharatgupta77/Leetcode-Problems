@@ -3,10 +3,8 @@ class Solution(object):
         """
         :type strs: List[str]
         :rtype: str
-        """     
-        if len(strs) == 0:
-            return ""
-    
+        """
+        
         shortest_string = min(strs, key=len)
     
         for i, char in enumerate(shortest_string):
@@ -15,4 +13,20 @@ class Solution(object):
                         return shortest_string[:i]
     
         return shortest_string
+
+
+# sol 2
+#         if not strs:
+#             return ""
+
+#         prefix = strs[0]
+
+#         for i in range(1, len(strs)):
+#             while strs[i].find(prefix) != 0:
+#                 prefix = prefix[:-1]
+#                 if not prefix:
+#                     return ""
+
+#         return prefix
+
         
