@@ -1,8 +1,6 @@
 class Solution:
     def countPrimes(self, n: int) -> int:
         cnt=0
-        if n == 2:
-            return 0
         l= [True for i in range(n+1)]
         a = 2
         while (a*a) <= n:
