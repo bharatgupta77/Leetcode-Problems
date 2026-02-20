@@ -1,7 +1,7 @@
 # Two Sum
 
 > 📅 Solved: 2026-02-20 | 🏷️ Difficulty: **unknown** | 💻 Language: **Python3**
-> ⏱️ Runtime: **0 ms** | 💾 Memory: **20.4 MB**
+> ⏱️ Runtime: **2 ms** | 💾 Memory: **20.6 MB**
 
 ---
 
