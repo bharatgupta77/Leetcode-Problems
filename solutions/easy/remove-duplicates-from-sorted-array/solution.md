@@ -1,7 +1,7 @@
 # Remove Duplicates from Sorted Array
 
 > 📅 Solved: 2026-02-22 | 🏷️ Difficulty: **easy** | 💻 Language: **Python3**
-> ⏱️ Runtime: **0 ms** | 💾 Memory: **20.6 MB**
+> ⏱️ Runtime: **4 ms** | 💾 Memory: **20.7 MB**
 
 ---
 
@@ -61,7 +61,7 @@ class Solution:
                 i+=1
         
         return i+1
-        
+                j+=1
 
 ```
 
