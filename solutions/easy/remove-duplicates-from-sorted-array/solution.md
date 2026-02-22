@@ -1,7 +1,7 @@
 # Remove Duplicates from Sorted Array
 
 > 📅 Solved: 2026-02-22 | 🏷️ Difficulty: **easy** | 💻 Language: **Python3**
-> ⏱️ Runtime: **3 ms** | 💾 Memory: **20.8 MB**
+> ⏱️ Runtime: **0 ms** | 💾 Memory: **20.6 MB**
 
 ---
 
@@ -53,7 +53,7 @@ class Solution:
 
         while j < len(nums):
 
-            while nums[i] != nums[j]:
+            if nums[i] != nums[j]:
             else:
                 j+=1
             
