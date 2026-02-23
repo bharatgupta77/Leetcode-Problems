@@ -1,68 +1,83 @@
 # Remove Duplicates from Sorted Array
 
-> 📅 Solved: 2026-02-22 | 🏷️ Difficulty: **easy** | 💻 Language: **Python3**
-> ⏱️ Runtime: **4 ms** | 💾 Memory: **20.7 MB**
+> 📅 Solved: 2026-02-23 | 🏷️ Difficulty: **easy** | 💻 Language: **Python3**
+> ⏱️ Runtime: **3 ms** | 💾 Memory: **20.7 MB**
 
 ---
 
 ## 📝 Problem Description
 
-A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
 
-Given a string s, return true if it is a palindrome, or false otherwise.
+Consider the number of unique elements in nums to be k​​​​​​​​​​​​​​. After removing duplicates, return the number of unique elements k.
+
+The first k elements of nums should contain the unique numbers in sorted order. The remaining elements beyond index k - 1 can be ignored.
+
+Custom Judge:
+
+The judge will test your solution with the following code:
+
+int[] nums = [...]; // Input array
+int[] expectedNums = [...]; // The expected answer with correct length
+
+int k = removeDuplicates(nums); // Calls your implementation
+
+assert k == expectedNums.length;
+for (int i = 0; i < k; i++) {
+    assert nums[i] == expectedNums[i];
+}
+
+If all assertions pass, then your solution will be accepted.
 
  
 
 Example 1:
 
-Input: s = "A man, a plan, a canal: Panama"
-Output: true
-Explanation: "amanaplanacanalpanama" is a palindrome.
+Input: nums = [1,1,2]
+Output: 2, nums = [1,2,_]
+Explanation: Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
 
 Example 2:
 
-Input: s = "race a car"
-Output: false
-Explanation: "raceacar" is not a palindrome.
-
-Example 3:
-
-Input: s = " "
-Output: true
-Explanation: s is an empty string "" after removing non-alphanumeric characters.
-Since an empty string reads the same forward and backward, it is a palindrome.
+Input: nums = [0,0,1,1,1,2,2,3,3,4]
+Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]
+Explanation: Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.
+It does not matter what you leave beyond the returned k (hence they are underscores).
 
  
 
 Constraints:
 
-	1 <= s.length <= 2 * 105
+	1 <= nums.length <= 3 * 104
 
-	s consists only of printable ASCII characters.
+	-100 <= nums[i] <= 100
+
+	nums is sorted in non-decreasing order.
 
 ---
 
 ## ✅ My Solution
 
 ```python
-class Solution:
-    def removeDuplicates(self, nums: List[int]) -> int:
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
 
-        i = 0
-        j = 0
+        i = 0
+        j = 0
 
-        while j < len(nums):
+        while j < len(nums):
 
-            if nums[i] != nums[j]:
-            else:
-                j+=1
-            
-                nums[i+1] = nums[j]
-                i+=1
-        
-        return i+1
-                j+=1
-
+            if nums[i] != nums[j]:
+                nums[i+1] = nums[j]
+                i+=1
+                j+=1
+            else:
+                j+=1
+        
+        return i+1
+            
+        
 ```
 
 ---
