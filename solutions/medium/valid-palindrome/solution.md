@@ -1,7 +1,7 @@
 # Valid Palindrome
 
 > 📅 Solved: 2026-02-23 | 🏷️ Difficulty: **medium** | 💻 Language: **Python3**
-> ⏱️ Runtime: **6 ms** | 💾 Memory: **19.9 MB**
+> ⏱️ Runtime: **11 ms** | 💾 Memory: **19.6 MB**
 
 ---
 
