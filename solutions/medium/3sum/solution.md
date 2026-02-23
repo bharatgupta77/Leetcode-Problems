@@ -1,7 +1,7 @@
 # 3Sum
 
 > 📅 Solved: 2026-02-23 | 🏷️ Difficulty: **medium** | 💻 Language: **Python3**
-> ⏱️ Runtime: **668 ms** | 💾 Memory: **22.5 MB**
+> ⏱️ Runtime: **671 ms** | 💾 Memory: **22.3 MB**
 
 ---
 
