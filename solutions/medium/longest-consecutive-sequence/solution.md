@@ -1,75 +1,80 @@
 # Longest Consecutive Sequence
 
-> 📅 Solved: 2026-02-21 | 🏷️ Difficulty: **medium** | 💻 Language: **Python3**
-> ⏱️ Runtime: **51 ms** | 💾 Memory: **36.8 MB**
+> 📅 Solved: 2026-02-23 | 🏷️ Difficulty: **medium** | 💻 Language: **Python3**
+> ⏱️ Runtime: **51 ms** | 💾 Memory: **36.6 MB**
 
 ---
 
 ## 📝 Problem Description
 
-Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+
+Notice that the solution set must not contain duplicate triplets.
 
  
 
 Example 1:
 
-Input: strs = ["eat","tea","tan","ate","nat","bat"]
-
-Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
-
-Explanation:
-
-	There is no string in strs that can be rearranged to form "bat".
-
-	The strings "nat" and "tan" are anagrams as they can be rearranged to form each other.
-
-	The strings "ate", "eat", and "tea" are anagrams as they can be rearranged to form each other.
+Input: nums = [-1,0,1,2,-1,-4]
+Output: [[-1,-1,2],[-1,0,1]]
+Explanation: 
+nums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.
+nums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.
+nums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.
+The distinct triplets are [-1,0,1] and [-1,-1,2].
+Notice that the order of the output and the order of the triplets does not matter.
 
 Example 2:
 
-Input: strs = [""]
-
-Output: [[""]]
+Input: nums = [0,1,1]
+Output: []
+Explanation: The only possible triplet does not sum up to 0.
 
 Example 3:
 
-Input: strs = ["a"]
-
-Output: [["a"]]
+Input: nums = [0,0,0]
+Output: [[0,0,0]]
+Explanation: The only possible triplet sums up to 0.
 
  
 
 Constraints:
 
-	1 <= strs.length <= 104
+	3 <= nums.length <= 3000
 
-	0 <= strs[i].length <= 100
-
-	strs[i] consists of lowercase English letters.
+	-105 <= nums[i] <= 105
 
 ---
 
 ## ✅ My Solution
 
 ```python
-                length = 1
-                
-                    current_num += 1
-                    length += 1
-                
-                while current_num + 1 in s:
-                max_length = max(max_length, length)
+class Solution:
+    def longestConsecutive(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
 
-        return max_length
-
-
-                current_num = num
-            if (num-1) not in s:
-        for num in s:
+        s = set(nums)
+        (s)  
+        max_length = 0
+        length = 0
 
 
-        length = 0
-        max_length = 0
+        for num in s:
+            if (num-1) not in s:
+                current_num = num
+                length = 1
+                
+                while current_num + 1 in s:
+                    current_num += 1
+                    length += 1
+                
+                max_length = max(max_length, length)
+
+        return max_length
+
+
+
 
 ```
 
