@@ -1,7 +1,7 @@
 # 3Sum
 
 > 📅 Solved: 2026-02-23 | 🏷️ Difficulty: **medium** | 💻 Language: **Python3**
-> ⏱️ Runtime: **691 ms** | 💾 Memory: **22.2 MB**
+> ⏱️ Runtime: **666 ms** | 💾 Memory: **22.5 MB**
 
 ---
 
@@ -68,7 +68,7 @@ class Solution:
                 if current_sum == target:
                     result.append([nums[i], nums[j], nums[k]])
                     
-                    while j < j and nums[j] == nums[j+1]:
+                    while j < k and nums[j] == nums[j+1]:
                         j += 1
                     while j < k and nums[k] == nums[k-1]:
                         k -= 1
