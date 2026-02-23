@@ -1,7 +1,7 @@
 # 3Sum
 
 > 📅 Solved: 2026-02-23 | 🏷️ Difficulty: **medium** | 💻 Language: **Python3**
-> ⏱️ Runtime: **671 ms** | 💾 Memory: **22.3 MB**
+> ⏱️ Runtime: **691 ms** | 💾 Memory: **22.2 MB**
 
 ---
 
@@ -49,8 +49,45 @@ Constraints:
 ## ✅ My Solution
 
 ```python
-c
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        result = []
+        nums.sort()
 
+        for i in range(0,len(nums)-2):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+
+            j  = i+1
+            k = len(nums) - 1
+            target = -nums[i]
+
+            while j<k:
+                current_sum = nums[j] + nums[k]
+        
+                if current_sum == target:
+                    result.append([nums[i], nums[j], nums[k]])
+                    
+                    while j < j and nums[j] == nums[j+1]:
+                        j += 1
+                    while j < k and nums[k] == nums[k-1]:
+                        k -= 1
+                    
+                    j += 1
+                    k -= 1
+
+                elif nums[j] + nums[k] < target:
+                    j+=1
+                
+                else:
+                    k-=1
+        
+        return result
+
+                
+
+
+        
 ```
 
 ---
