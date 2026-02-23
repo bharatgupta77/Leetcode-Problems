@@ -1,7 +1,7 @@
 # Trapping Rain Water
 
 > 📅 Solved: 2026-02-23 | 🏷️ Difficulty: **hard** | 💻 Language: **Python3**
-> ⏱️ Runtime: **4 ms** | 💾 Memory: **21.1 MB**
+> ⏱️ Runtime: **11 ms** | 💾 Memory: **21 MB**
 
 ---
 
@@ -49,14 +49,15 @@ class Solution:
         while left < right:
             if height[left] < height[right]:
                 left_max = max(left_max, height[left])
-                water += left_max - height[left]
-                left += 1
+                water+= left_max - height[left]
+                left+=1
             else:
                 right_max = max(right_max, height[right])
-                water += right_max - height[right]
-                right -= 1
-    
+                water+= right_max - height[right]
+                right -=1
+        
         return water
+
                     
 
 
