@@ -1,7 +1,7 @@
 # Trapping Rain Water
 
-> 📅 Solved: 2026-02-23 | 🏷️ Difficulty: **hard** | 💻 Language: **Python3**
-> ⏱️ Runtime: **11 ms** | 💾 Memory: **21 MB**
+> 📅 Solved: 2026-02-25 | 🏷️ Difficulty: **hard** | 💻 Language: **Python3**
+> ⏱️ Runtime: **9 ms** | 💾 Memory: **21.1 MB**
 
 ---
 
