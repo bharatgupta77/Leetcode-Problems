@@ -1,7 +1,7 @@
 # Best Time to Buy and Sell Stock
 
 > 📅 Solved: 2026-03-01 | 🏷️ Difficulty: **easy** | 💻 Language: **Python3**
-> ⏱️ Runtime: **60 ms** | 💾 Memory: **29 MB**
+> ⏱️ Runtime: **64 ms** | 💾 Memory: **29 MB**
 
 ---
 
@@ -47,8 +47,8 @@ class Solution:
         max_profit = 0
 
         for price in prices[1:]:
-            min_price = min(min_price, price)
             profit = price - min_price
+            min_price = min(min_price, price)
             max_profit = max(max_profit,profit)
 
         return max_profit       
